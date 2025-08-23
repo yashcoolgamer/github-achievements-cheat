@@ -2,23 +2,23 @@ import os
 import time
 
 from dotenv import load_dotenv
-from git import Repo
+from git import Repo, Actor
 
 # 加载 .env 文件
 load_dotenv()
-
-# 从 .env 获取仓库信息
-REPO_NAME = os.getenv("REPO_NAME")
-REPO_OWNER = os.getenv("REPO_OWNER")
-GITHUB_PERSONAL_ACCESS_TOKEN = os.getenv("GITHUB_PERSONAL_ACCESS_TOKEN")
-REPO_URL = f"https://{GITHUB_PERSONAL_ACCESS_TOKEN}@github.com/{REPO_OWNER}/{REPO_NAME}.git"
-REPO_DIR = f"./{REPO_NAME}"
 
 # 获取作者信息
 GITHUB_USERNAME_1 = os.getenv("GITHUB_USERNAME_1")
 GITHUB_USER1_EMAIL = os.getenv("GTIHUB_USER1_EMAIL")
 GITHUB_USERNAME_2 = os.getenv("GITHUB_USERNAME_2")
 GITHUB_USER2_EMAIL = os.getenv("GTIHUB_USER2_EMAIL")
+
+# 从 .env 获取仓库信息
+REPO_NAME = os.getenv("REPO_NAME")
+REPO_OWNER = os.getenv("REPO_OWNER")
+GITHUB_PAT = os.getenv("GITHUB_PAT")
+REPO_URL = f"https://{GITHUB_PAT}@github.com/{GITHUB_USERNAME_1}/{REPO_NAME}.git"
+REPO_DIR = f"./{REPO_NAME}"
 
 co_authors = [
     {"name": GITHUB_USERNAME_1, "email": GITHUB_USER1_EMAIL},
@@ -35,9 +35,8 @@ def first_commit(repo_path):
     repo = Repo(repo_path)
     repo.index.add(["test_file.txt"])
     commit_msg = generate_commit_message("Initial Commit", co_authors)
-    # 使用环境变量中的第一个作者作为主要作者
-    repo.index.commit(commit_msg, author=f"{GITHUB_USERNAME_1} <{GITHUB_USER1_EMAIL}>")
-    # 设置上游分支
+    author = Actor(GITHUB_USERNAME_1, GITHUB_USER1_EMAIL)
+    repo.index.commit(commit_msg, author=author)
     origin = repo.remote(name='origin')
     origin.push()
 
@@ -53,7 +52,7 @@ def make_commits(repo_path, num_commits=5):
         commit_msg = generate_commit_message(f"Commit #{i + 1}", co_authors)
         # 随机选择一个共同作者作为主导作者
         author_idx = i % len(co_authors)
-        author = f"{co_authors[author_idx]['name']} <{co_authors[author_idx]['email']}>"
+        author = Actor(co_authors[author_idx]['name'], co_authors[author_idx]['email'])
         # 执行提交
         repo.index.commit(commit_msg, author=author)
         # 推送提交
@@ -86,5 +85,5 @@ repo.config_writer().set_value("user", "email", GITHUB_USER1_EMAIL).release()
 first_commit(REPO_DIR)
 
 # 多次提交
-make_commits(REPO_DIR, num_commits=3)
+make_commits(REPO_DIR, num_commits=48)
 print("Done!")
