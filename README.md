@@ -1,16 +1,18 @@
 # GitHub Achievements Cheat
 
+[中文](./README-zh.md) | English
+
 Some scripts help you to 100% unlock some of the achievements on your GitHub profile !!!
 
-## What you can unlock
+## What You Can Unlock
 
-| Title                | Badge                                                              | How to unlock |
-|----------------------|--------------------------------------------------------------------|---------------|
-| Pair Extraordinaire x4 | ![Pair Extraordinaire Badge](/images/pair-extraordinaire-gold.png) | run [pair-extraordinaire.py](pair-extraordinaire.py) |
-| Galaxy Brain x4     | ![Galaxy Brain Badge](/images/galaxy-brain-gold.png)               | run [galaxy-brain.py](galaxy-brain.py) |
-| Pull Shark x4      | ![Pull Shark Badge](/images/pull-shark-gold.png)                   | run [pull-shark.py](pull-shark.py) |
-| Quickdraw         | ![Quickdraw Badge](/images/quickdraw-default.png)                  | run [quickdraw.py](quickdraw.py) |
-| YOLO             | ![YOLO Badge](/images/yolo-default.png)                            | run [yolo.py](yolo.py) |
+| Name                   | Badge                                                                                                  | Unlock Method                                        |
+|------------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------|
+| Pair Extraordinaire x4 | <img alt="Pair Extraordinaire Badge" src="/images/pair-extraordinaire-gold.png" style="width: 180px;"> | Run [pair-extraordinaire.py](pair-extraordinaire.py) |
+| Galaxy Brain x4        | <img alt="Galaxy Brain Badge" src="/images/galaxy-brain-gold.png" style="width: 180px;">               | Run [galaxy-brain.py](galaxy-brain.py)               |
+| Pull Shark x4          | <img alt="Pull Shark Badge" src="/images/pull-shark-gold.png" style="width: 180px;">                   | Run [pull-shark.py](pull-shark.py)                   |
+| Quickdraw              | <img alt="Quickdraw Badge" src="/images/quickdraw-default.png" style="width: 180px;">                  | Run [quickdraw.py](quickdraw.py)                     |
+| YOLO                   | <img alt="YOLO Badge" src="/images/yolo-default.png" style="width: 180px;">                            | Run [yolo.py](yolo.py)                               |
 
 ## What you need to do
 
@@ -20,17 +22,18 @@ Some scripts help you to 100% unlock some of the achievements on your GitHub pro
 
 3. run the script
 
-4. wait for a while, then check your profile page
+4. check your profile page
 
-## What will happen
+## What You Should Be Aware Of!!!
 
+This action is strictly speaking a violation of GitHub's [Terms of Service](https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies), and you bear the risks yourself
 
-
-## What you need to attention !!!
-
+It may trigger GitHub's [rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api). Please do not run the scripts too frequently, or your account may be temporarily suspended.
 
 ## Reference
 
 - [github-profile-achievements](https://github.com/Schweinepriester/github-profile-achievements)
 
 - [github official doc](https://docs.github.com/en/account-and-profile/get-started/personalizing-your-profile)
+
+- [Github API Doc](https://docs.github.com/en/rest)

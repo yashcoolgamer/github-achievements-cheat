@@ -49,7 +49,6 @@ def create_branch(local_repo, branch_name):
     new_branch = local_repo.create_head(branch_name)
     new_branch.checkout()
 
-
 def commit_with_coauthor(local_repo, branch_name, i):
     print("📝 提交 commit (带 co-author)...")
     file_name = "dummy.txt"
@@ -101,7 +100,10 @@ def main():
     else:
         local_repo = Repo(repo_dir)
 
-    for i in range(1, 48):
+# Disclaimer: Be cautious when modifying the loop count here, as excessive operations may lead to account restrictions by GitHub.
+# 免责声明：谨慎修改这里的循环此处次数，过多操作可能导致账号被 GitHub 限制
+
+    for i in range(1, 5):
         sync_with_remote(local_repo)
         branch_name = f"feature-{i}"
         create_branch(local_repo, branch_name)

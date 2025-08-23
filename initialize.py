@@ -6,7 +6,6 @@ from dotenv import load_dotenv, set_key
 # 加载 .env 文件
 load_dotenv()
 
-
 # 1️⃣ 获取当前用户名的函数（通过 GitHub API）
 def get_github_username():
     token = os.getenv("GITHUB_PAT_1")
