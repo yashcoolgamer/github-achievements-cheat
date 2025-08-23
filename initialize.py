@@ -67,6 +67,7 @@ def fork_repo(owner, repo_name):
     else:
         raise Exception(f"❌ fork 操作失败：{response.status_code} - {response.text}")
 
+# TODO 添加工具账号为协作者
 
 # 🔍 主程序入口
 if __name__ == "__main__":

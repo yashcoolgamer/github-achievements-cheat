@@ -11,10 +11,7 @@ load_dotenv()
 
 # ---------------- 配置 ----------------
 GITHUB_USERNAME_1 = os.getenv("GITHUB_USERNAME_1")  # 目标账号（获取成就）
-GITHUB_USERNAME_2 = os.getenv("GITHUB_USERNAME_2")  # 工具账号
-
 GITHUB_USER1_EMAIL = os.getenv("GITHUB_USER1_EMAIL")
-GITHUB_USER2_EMAIL = os.getenv("GITHUB_USER2_EMAIL")
 
 REPO_OWNER = os.getenv("REPO_OWNER")
 REPO_NAME = os.getenv("REPO_NAME")
@@ -70,7 +67,19 @@ def create_pr(branch_name):
         "head": f"{GITHUB_USERNAME_1}:{branch_name}",
         "base": "main"
     }
-    return gh_request("POST", f"/repos/{REPO_OWNER}/{REPO_NAME}/pulls", PAT_1, json=data)
+    return gh_request("POST", f"/repos/{GITHUB_USERNAME_1}/{REPO_NAME}/pulls", PAT_1, json=data)
+
+def close_pr(pr_number):
+    print(f"🚫 关闭 PR #{pr_number}...")
+    data = {
+        "state": "closed"
+    }
+    return gh_request("PATCH", f"/repos/{GITHUB_USERNAME_1}/{REPO_NAME}/pulls/{pr_number}", PAT_1, json=data)
+
+def delete_branch(branch_name):
+    print(f"🗑 删除分支 {branch_name}")
+    gh_request("DELETE", f"/repos/{GITHUB_USERNAME_1}/{REPO_NAME}/git/refs/heads/{branch_name}", PAT_1)
+
 
 def main():
     # 克隆目标账号 fork 的仓库
@@ -86,6 +95,10 @@ def main():
     pr = create_pr("quick-draw")
     pr_number = pr["number"]
     print(f"✅ 创建 PR #{pr_number}...")
+    time.sleep(2)
+    close_pr(pr_number)
+    time.sleep(2)
+    delete_branch("quick-draw")
     time.sleep(3)
 
     shutil.rmtree(repo_dir)

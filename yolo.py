@@ -71,6 +71,13 @@ def create_pr(branch_name):
     }
     return gh_request("POST", f"/repos/{GITHUB_USERNAME_1}/{REPO_NAME}/pulls", PAT_1, json=data)
 
+def request_review(pr_number, reviewers):
+    print(f"👀 请求 {', '.join(reviewers)} 审核 PR #{pr_number}...")
+    data = {
+        "reviewers": reviewers
+    }
+    return gh_request("POST", f"/repos/{GITHUB_USERNAME_1}/{REPO_NAME}/pulls/{pr_number}/requested_reviewers", PAT_1, json=data)
+
 def merge_pr(pr_number):
     print(f"✅ 合并 PR #{pr_number}...")
     gh_request("PUT", f"/repos/{GITHUB_USERNAME_1}/{REPO_NAME}/pulls/{pr_number}/merge", PAT_1, json={"merge_method": "squash"})
@@ -92,6 +99,7 @@ def main():
     commit(local_repo, "yolo")
     pr = create_pr("yolo")
     pr_number = pr["number"]
+    request_review(pr_number, [GITHUB_USERNAME_2])
     time.sleep(2)
     merge_pr(pr_number)
     delete_branch("yolo")
