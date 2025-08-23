@@ -80,7 +80,6 @@ def delete_branch(branch_name):
     print(f"🗑 删除分支 {branch_name}")
     gh_request("DELETE", f"/repos/{GITHUB_USERNAME_1}/{REPO_NAME}/git/refs/heads/{branch_name}", PAT_1)
 
-
 def main():
     # 克隆目标账号 fork 的仓库
     repo_url = f"https://{PAT_1}@github.com/{GITHUB_USERNAME_1}/{REPO_NAME}.git"
