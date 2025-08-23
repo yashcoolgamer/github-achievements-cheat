@@ -9,7 +9,7 @@ load_dotenv()
 
 # 1️⃣ 获取当前用户名的函数（通过 GitHub API）
 def get_github_username():
-    token = os.getenv("GITHUB_PAT")
+    token = os.getenv("GITHUB_PAT_1")
     if not token:
         raise ValueError("GITHUB_PAT 未在 .env 中设置")
 
@@ -23,7 +23,7 @@ def get_github_username():
 
     if response.status_code == 200:
         username = response.json()['login']
-        set_key('.env', 'GITHUB_USERNAME', username)
+        set_key('.env', 'GITHUB_USERNAME_1', username)
         return username
     else:
         raise Exception(f"无法获取用户名：{response.status_code} - {response.json().get('message')}")
@@ -31,7 +31,7 @@ def get_github_username():
 
 # 2️⃣ Star 仓库
 def star_a_repo(owner, repo_name):
-    token = os.getenv("GITHUB_PAT")
+    token = os.getenv("GITHUB_PAT_1")
     if not token:
         raise ValueError("GITHUB_PAT 未在 .env 中设置")
 
@@ -51,7 +51,7 @@ def star_a_repo(owner, repo_name):
 
 # 3️⃣ Fork 仓库
 def fork_repo(owner, repo_name):
-    token = os.getenv("GITHUB_PAT")
+    token = os.getenv("GITHUB_PAT_1")
     if not token:
         raise ValueError("GITHUB_PAT 未在 .env 中设置")
 
