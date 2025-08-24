@@ -207,8 +207,8 @@ if __name__ == "__main__":
         username = get_github_username()
         print(f"👨‍💻 当前 GitHub 用户名：{username}")
 
-        # Star 仓库
-        star_a_repo(REPO_OWNER, REPO_NAME)
+        # # Star 仓库
+        # star_a_repo(REPO_OWNER, REPO_NAME)
 
         # Fork 仓库
         fork_repo(REPO_OWNER, REPO_NAME)
