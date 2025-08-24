@@ -100,8 +100,8 @@ def main():
     else:
         local_repo = Repo(repo_dir)
 
-# Disclaimer: Be cautious when modifying the loop count here, as excessive operations may lead to account restrictions by GitHub.
-# 免责声明：谨慎修改这里的循环此处次数，过多操作可能导致账号被 GitHub 限制
+    # Disclaimer: Be cautious when modifying the loop count here, as excessive operations may lead to account restrictions by GitHub.
+    # 免责声明：谨慎修改这里的循环此处次数，过多操作可能导致账号被 GitHub 限制
 
     for i in range(1, 5):
         sync_with_remote(local_repo)

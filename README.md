@@ -2,6 +2,10 @@
 
 [中文](./README-zh.md) | English
 
+Want your GitHub profile to look like a professional?
+
+![Sample](./images/sample.png)
+
 Some scripts help you to 100% unlock some of the achievements on your GitHub profile !!!
 
 ## What You Can Unlock
@@ -10,7 +14,7 @@ Some scripts help you to 100% unlock some of the achievements on your GitHub pro
 |------------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------|
 | Pair Extraordinaire x4 | <img alt="Pair Extraordinaire Badge" src="/images/pair-extraordinaire-gold.png" style="width: 180px;"> | Run [pair-extraordinaire.py](pair-extraordinaire.py) |
 | Galaxy Brain x4        | <img alt="Galaxy Brain Badge" src="/images/galaxy-brain-gold.png" style="width: 180px;">               | Run [galaxy-brain.py](galaxy-brain.py)               |
-| Pull Shark x4          | <img alt="Pull Shark Badge" src="/images/pull-shark-gold.png" style="width: 180px;">                   | Run [pull-shark.py](pull-shark.py)                   |
+| Pull Shark x4          | <img alt="Pull Shark Badge" src="/images/pull-shark-gold.png" style="width: 180px;">                   | Run [pair-extraordinaire.py](pair-extraordinaire.py) |
 | Quickdraw              | <img alt="Quickdraw Badge" src="/images/quickdraw-default.png" style="width: 180px;">                  | Run [quickdraw.py](quickdraw.py)                     |
 | YOLO                   | <img alt="YOLO Badge" src="/images/yolo-default.png" style="width: 180px;">                            | Run [yolo.py](yolo.py)                               |
 
@@ -20,7 +24,7 @@ Some scripts help you to 100% unlock some of the achievements on your GitHub pro
 
 2. generate a personal access token with `repo` `user` `write:disscussion`  scope
 
-3. run the script
+3. run the script, be cautious about the frequency of script execution.
 
 4. check your profile page
 

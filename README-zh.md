@@ -2,6 +2,10 @@
 
 中文 | [English](./README.md)
 
+想要你的 GitHub 个人资料看起来像一个专业人士吗？
+
+![Sample](./images/sample.png)
+
 一些脚本可帮助你 100% 解锁 GitHub 个人资料中的一些成就！！！
 
 ## 你可以解锁的内容
@@ -10,7 +14,7 @@
 |------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------------------------------|
 | Pair Extraordinaire x4 | <img alt="Pair Extraordinaire 徽章" src="/images/pair-extraordinaire-gold.png" style="width: 180px;"> | 运行 [pair-extraordinaire.py](pair-extraordinaire.py) |
 | Galaxy Brain x4        | <img alt="Galaxy Brain 徽章" src="/images/galaxy-brain-gold.png" style="width: 180px;">               | 运行 [galaxy-brain.py](galaxy-brain.py)               |
-| Pull Shark x4          | <img alt="Pull Shark 徽章" src="/images/pull-shark-gold.png" style="width: 180px;">                   | 运行 [pull-shark.py](pull-shark.py)                   |
+| Pull Shark x4          | <img alt="Pull Shark 徽章" src="/images/pull-shark-gold.png" style="width: 180px;">                   | 运行 [pair-extraordinaire.py](pair-extraordinaire.py) |
 | Quickdraw              | <img alt="Quickdraw 徽章" src="/images/quickdraw-default.png" style="width: 180px;">                  | 运行 [quickdraw.py](quickdraw.py)                     |
 | YOLO                   | <img alt="YOLO 徽章" src="/images/yolo-default.png" style="width: 180px;">                            | 运行 [yolo.py](yolo.py)                               |
 
@@ -20,7 +24,7 @@
 
 2. 生成一个拥有 `repo` `user` `write:discussion` 权限范围的个人访问令牌
 
-3. 运行脚本 每个脚本最好间隔半天
+3. 运行脚本 谨慎注意脚本运行的频率
 
 4. 检查你的个人资料页面是否出现成就
 
